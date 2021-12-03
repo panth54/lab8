@@ -6,6 +6,8 @@ using namespace std;
 int main(){
     // variable declaration
     string input1, input2, input3, input4, input5;
+
+    //Dialog
     cout << "Fahsai: Sawadee ka...Can you tell me your name?\n";
     cout << "?????: ";
     getline(cin, input1);

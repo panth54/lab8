@@ -1,18 +1,32 @@
-//Dialog of the first example is given below.
+#include <iostream>
+#include <string>
 
-/*
-Fahsai: Sawadee ka...Can you tell me your name?
-?????: Luke Skywalker
-Fahsai: Wow!!! Luke Skywalker is a really cool name.
-Fahsai: I think you are an Engineering student. What is your student ID?
-Luke Skywalker: 590610999
-Fahsai: I think you may be GEAR 47. I have a free movie ticket for you.
-Fahsai: Let's go to the cinema together!!!
-Fahsai: What movie do you want to watch?
-Luke Skywalker: Star Wars VII
-Fahsai: So....which day are you free to go with me?
-Luke Skywalker: Next Monday
-Fahsai: Next Monday....that is OK!!! I'm looking forward to watching Star Wars VII with you.
-Luke Skywalker: May the Force be with you krub
-Fahsai: 555+ see you Next Monday. Bye Bye \(^ ^)/
-*/
+using namespace std;
+
+int main(){
+    // variable declaration
+    string input1, input2, input3, input4, input5;
+    cout << "Fahsai: Sawadee ka...Can you tell me your name?\n";
+    cout << "?????: ";
+    getline(cin, input1);
+    cout << "Fahsai: Wow!!! " <<input1 <<" is a really cool name.\n";
+    cout << "Fahsai: I think you are an Engineering student. What is your student ID?\n";
+    cout << input1 << ": ";
+    cin >> input2;
+    cin.ignore();
+    int year = stoi(input2.substr(0,2));
+    cout << "Fahsai: I think you may be GEAR "<<year - 12<<". I have a free movie ticket for you.\n";
+    cout << "Fahsai: Let's go to the cinema together!!!\n";
+    cout << "Fahsai: What movie do you want to watch?\n";
+    cout << input1 << ": ";
+    getline(cin, input3);
+    cout << "Fahsai: So....which day are you free to go with me?\n";
+    cout << input1 << ": ";
+    getline(cin, input4);
+    cout << "Fahsai: "<<input4<<"....that is OK!!! I'm looking forward to watching "<<input3<<" with you.\n";
+    cout << input1 << ": ";
+    getline(cin, input5);
+    cout << "Fahsai: 555+ see you "<<input4<<". Bye Bye \\(^ ^)/\n";
+
+    return 0;
+}
